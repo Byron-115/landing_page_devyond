@@ -10,6 +10,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  
+  /* Se usa rem en vez de px ! */
+  --breakpoint-xl: 80rem;
+  --breakpoint-lg: 64rem;
+  --braakpoint-md: 48rem;
+  --breakpoint-sm: 40rem; 
 }
 
 @media (prefers-color-scheme: dark) {
