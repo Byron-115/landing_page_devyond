@@ -44,43 +44,71 @@ const HeaderDesktop: React.FC<HeaderDesktopProps> = ({ setHeaderOffset }) => {
 
     return (
         <>
-            {/* Header normal: se desvanece y desplaza al hacer scroll */}
+            {/* Header fijo*/}
             {headerOffset < 52 && (
                 <header
                     className={`
-                        hidden md:flex fixed top-[30px] left-0 w-full
-                        z-50 bg-transparent
+                         font-sf hidden md:flex fixed top-[45px] left-0 w-full
+                        z-50 
                         transition-transform duration-300 ease-in-out
-                        pointer-events-auto
+                        pointer-events-auto bg-transparent
                     `}
                     style={{
                         transform: `translateY(-${headerOffset}px)`,
                         opacity: 1 - headerOffset / 52,
                     }}
                 >
-                    <div className={`
-                        flex items-center rounded-full 
-                        h-[52px] 
-                        px-1 sm:px-2 md:px-4 lg:px-6
-                        gap-1 sm:gap-2 md:gap-4 lg:gap-8
-                        w-full max-w-[1600px] justify-between mx-auto
-                    `}>
-                        <div className="flex-shrink-0 w-[115px] h-[26px] flex items-center">
+                    <div className= "flex items-center w-full max-w-[846px] mx-auto h-[52px]">
+                        {/* Logo */}
+                        <div className="flex items-center w-[115px] h-[26px] flex-shrink-0">
                             <Logo />
                         </div>
-                        <nav className="flex flex-nowrap gap-1 sm:gap-3 lg:gap-12 xl:gap-16">
-                            {navLinks.map((link) => (
-                                <a
-                                    key={link.label}
-                                    href={link.href}
-                                    className="text-white font-medium text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
-                                >
-                                    {link.label}
-                                </a>
-                            ))}
-                        </nav>
-                        <div className="flex-shrink-0">
-                            <SolidButton>Reserva una llamada</SolidButton>
+                        {/* Contenedor de 756x52px */}
+                        <div className="flex items-center w-[756px] h-[52px]">
+                            {/* Navlinks + botón en 657x28px */}
+                            <div className="flex items-center justify-between w-[657px] h-[28px] ml-18.5 pl-2">
+                                <nav className="flex flex-nowrap gap-5">
+                                    {/* {navLinks.map((link) => (
+                                        <a 
+                                            key={link.label}
+                                            href={link.href}
+                                            className="text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))} */}
+                                    <a
+                                        href="#"
+                                        className="flex items-center justify-center w-[155px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                    >
+                                        Nuestra metodología
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="flex items-center justify-center w-[134px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                    >
+                                        Stack tecnológico
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="flex items-center justify-center w-[77px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                        style={{ padding: 0 }}
+                                    >
+                                        Servicios
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="flex items-center justify-center w-[50px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                        style={{ padding: 0 }}
+                                    >
+                                        F.A.Q.
+                                    </a>
+
+                                </nav>
+                                <div className="flex-shrink-0 w-[161px] h-[28px] ml-4.5">
+                                    <SolidButton>Reserva una llamada</SolidButton>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -98,32 +126,44 @@ const HeaderDesktop: React.FC<HeaderDesktopProps> = ({ setHeaderOffset }) => {
                 >
                     <div className={`
                         flex items-center rounded-full 
-                        h-[52px] 
-                        px-1 sm:px-2 md:px-4 lg:px-6
-                        gap-1 sm:gap-2 md:gap-4 lg:gap-8
-                        w-auto max-w-fit mx-auto
-                        shadow-[0_2px_6.9px_0px_#93E657] border-t-[2px] border-b-[5px] border-[#93E657] bg-black
-                    `}
+                        w-[737px] h-[52px] mx-auto
+                        shadow-[0_2px_6.9px_0px_#93E657] border-1 border-black bg-black
+                        `}
                         style={{
-                            borderTopWidth: "2px",
-                            borderBottomWidth: "5px",
-                            borderColor: "#93E657",
                             boxShadow: "0 2px 6.9px 0 #93E657",
                         }}
                     >
-                        <nav className="flex flex-nowrap gap-1 sm:gap-3 lg:gap-12 xl:gap-16">
-                            {navLinks.map((link) => (
+                        <div className="flex items-center justify-between w-[657px] h-[28px] mx-auto">
+                            <nav className="flex flex-nowrap gap-5">
                                 <a
-                                    key={link.label}
-                                    href={link.href}
-                                    className="text-white font-medium text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                    href="#"
+                                    className="flex items-center justify-center w-[155px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
                                 >
-                                    {link.label}
+                                    Nuestra metodología
                                 </a>
-                            ))}
-                        </nav>
-                        <div className="flex-shrink-0">
-                            <SolidButton>Reserva una llamada</SolidButton>
+                                <a
+                                    href="#"
+                                    className="flex items-center justify-center w-[134px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                >  
+                                    Stack tecnológico
+                                </a>
+                                <a
+                                    href="#"
+                                    className="flex items-center justify-center w-[77px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"                                    style={{ padding: 0 }}
+                                >
+                                    Servicios
+                                </a>
+                                <a
+                                    href="#"
+                                    className="flex items-center justify-center w-[50px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                    style={{ padding: 0 }}
+                                >
+                                    F.A.Q.
+                                </a>
+                            </nav>
+                            <div className="flex-shrink-0 w-[161px] h-[28px]">
+                                <SolidButton>Reserva una llamada</SolidButton>
+                            </div>
                         </div>
                     </div>
                 </header>

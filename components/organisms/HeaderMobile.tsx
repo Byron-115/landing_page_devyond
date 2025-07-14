@@ -17,7 +17,7 @@ const HeaderMobile: React.FC = () => {
     <header className="flex md:hidden fixed top-0 left-0 w-full z-50 bg-[#030714] h-[52px] items-center px-6">
       <Logo />
       <button
-        className="ml-auto flex flex-col justify-center items-center w-8 h-8 sm:w-[32px] sm:h-[32px]"
+        className="ml-auto flex flex-col justify-center items-center w-8 h-8 sm:w-[32px] sm:h-[32px] cursor-pointer"
         aria-label="Abrir menú"
         onClick={() => setOpen(!open)}
       >

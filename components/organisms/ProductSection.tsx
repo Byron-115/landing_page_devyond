@@ -9,15 +9,15 @@ const icons = [
 ];
 
 const ProductSection: React.FC = () => (
-  <section className="w-full flex flex-row items-center justify-center gap-8 py-16 px-4 bg-transparent">
+  <section className="w-full flex flex-col md:flex-row items-center justify-center gap-8 py-16 px-4 bg-transparent">
     {/* Columna de iconos */}
-    <div className="flex flex-col gap-8 items-center mr-4">
+    <div className="flex flex-col gap-8 items-center mr-0 md:mr-4 mb-8 md:mb-0">
       {icons.map((src, i) => (
         <img key={i} src={src} alt="" className="w-7 h-7 opacity-90" />
       ))}
     </div>
 
-    <div className="flex-shrink-0">
+    <div className="flex-shrink-0 mb-8 md:mb-0">
         <img
             src="/assets/images/product_image.png"
             alt="Product Section Image"
@@ -26,7 +26,7 @@ const ProductSection: React.FC = () => (
     </div>
 
     {/* Texto y botón */}
-    <div className="flex flex-col justify-center ml-8 max-w-md">
+    <div className="flex flex-col justify-center ml-0 md:ml-8 max-w-md">
       <h2 className="text-[#AEEE7C] text-2xl md:text-3xl font-medium mb-4">
         Aplicación Web / MVP
       </h2>
