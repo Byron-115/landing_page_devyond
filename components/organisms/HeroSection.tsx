@@ -1,29 +1,29 @@
 import React from "react";
 
 const HeroSection: React.FC = () => (
-  <section className="flex flex-col items-center justify-center w-[846px] h-[462px] mx-auto">
+  <section className="flex flex-col items-center justify-center w-full max-w-[846px] h-[462px] mx-auto px-4 sm:px-0">
     {/* Contenedor de texto principal */}
-    <div className="w-[846px] h-[283px] flex flex-col items-center">
+    <div className="w-full max-w-[846px] h-[283px] flex flex-col items-center">
       {/* Título */}
-      <div className="w-[846px] h-[127px] flex items-center justify-center">
-        <div className="w-[846] h-[70] flex flex-col items-center justify-center">
-          <h1 className="text-white font-medium text-4xl text-center leading-tight w-full">
-            Diseñamos y desarrollamos páginas webs modernas de alto rendimiento que<br />
+      <div className="w-full max-w-[846px] h-[127px] flex items-center justify-center">
+        <div className="w-full max-w-[846px] h-[70px] flex flex-col items-center justify-center">
+          <h1 className="text-white font-medium text-3xl sm:text-4xl text-center leading-tight w-full">
+            Diseñamos y desarrollamos webs modernas de alto rendimiento que<br />
           </h1>
-          <span className="text-[#82EC39] text-4xl font-medium mt-4 text-center w-full">generan engagement</span>
+          <span className="text-[#82EC39] text-3xl sm:text-xl font-medium mt-4 text-center w-full">generan engagement</span>
         </div>
       </div>
       {/* Subtítulo + botón */}
-      <div className="font-sf w-[846px] h-[112px] flex flex-col items-center justify-between mt-11">
-        <div className="w-[690px] h-[40px] flex items-center justify-center mx-auto">
-          <p className="text-gray-300 font-light leading-lg text-lg text-center w-full">
+      <div className="font-sf w-full max-w-[846px] h-[112px] flex flex-col items-center justify-between mt-11">
+        <div className="w-full max-w-[690px] h-[40px] flex items-center justify-center mx-auto">
+          <p className="text-gray-300 font-light leading-lg text-base sm:text-lg text-center w-full">
             Somos expertos en construir webs que generan resultados<br />
             para llevar tu negocio un paso más allá.
           </p>
         </div>
         <div className="mt-10">
           <button
-            className="w-[116px] h-[40px] bg-[#82EC39] hover:bg-lime-300 text-black font-semibold rounded-full flex items-center justify-center pl-4 pr-3 gap-1 transition-colors"
+            className="w-full max-w-[200px] h-[40px] bg-[#82EC39] hover:bg-lime-300 text-black font-semibold rounded-full flex items-center justify-center pl-4 pr-3 gap-1 transition-colors"
           >
             Hablemos
             <span className="flex items-center justify-center w-[20px] h-[20px] self-center">
@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => (
                   strokeLinejoin="round"
                 />
               </svg>
-              </span>
+            </span>
           </button>
         </div>
       </div>

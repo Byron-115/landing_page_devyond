@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         oxanium: ['Oxanium', 'sans-serif'],
       },
+      screens: {
+        xs: "360px",
+      },
     },
   },
   plugins: [],

@@ -48,7 +48,7 @@ const HeaderDesktop: React.FC<HeaderDesktopProps> = ({ setHeaderOffset }) => {
             {headerOffset < 52 && (
                 <header
                     className={`
-                         font-sf hidden md:flex fixed top-[45px] left-0 w-full
+                        font-sf-compact hidden md:flex fixed top-[45px] left-0 w-full
                         z-50 
                         transition-transform duration-300 ease-in-out
                         pointer-events-auto bg-transparent
@@ -58,58 +58,25 @@ const HeaderDesktop: React.FC<HeaderDesktopProps> = ({ setHeaderOffset }) => {
                         opacity: 1 - headerOffset / 52,
                     }}
                 >
-                    <div className= "flex items-center w-full max-w-[846px] mx-auto h-[52px]">
-                        {/* Logo */}
-                        <div className="flex items-center w-[115px] h-[26px] flex-shrink-0">
+                    <div className= "flex flex-row justify-between items-center w-full max-w-266 mx-auto h-13">
+                        {/* Contenedor Logo + Navlinks de 767x26px */}
+                        <div className="flex flex-row justify-start items-center gap-44">
                             <Logo />
+                            <nav className="flex flex-nowrap gap-5">
+                                {navLinks.map((link) => (
+                                    <a 
+                                        key={link.label}
+                                        href={link.href}
+                                        className="text-[#ecffe0] font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </nav>
                         </div>
-                        {/* Contenedor de 756x52px */}
-                        <div className="flex items-center w-[756px] h-[52px]">
-                            {/* Navlinks + botón en 657x28px */}
-                            <div className="flex items-center justify-between w-[657px] h-[28px] ml-18.5 pl-2">
-                                <nav className="flex flex-nowrap gap-5">
-                                    {/* {navLinks.map((link) => (
-                                        <a 
-                                            key={link.label}
-                                            href={link.href}
-                                            className="text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
-                                        >
-                                            {link.label}
-                                        </a>
-                                    ))} */}
-                                    <a
-                                        href="#"
-                                        className="flex items-center justify-center w-[155px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
-                                    >
-                                        Nuestra metodología
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="flex items-center justify-center w-[134px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
-                                    >
-                                        Stack tecnológico
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="flex items-center justify-center w-[77px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
-                                        style={{ padding: 0 }}
-                                    >
-                                        Servicios
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="flex items-center justify-center w-[50px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
-                                        style={{ padding: 0 }}
-                                    >
-                                        F.A.Q.
-                                    </a>
-
-                                </nav>
-                                <div className="flex-shrink-0 w-[161px] h-[28px] ml-4.5">
-                                    <SolidButton>Reserva una llamada</SolidButton>
-                                </div>
-                            </div>
-                        </div>
+                        <div className="flex-shrink-0">
+                            <SolidButton>Reserva una llamada</SolidButton>
+                         </div>
                     </div>
                 </header>
             )}
@@ -133,35 +100,19 @@ const HeaderDesktop: React.FC<HeaderDesktopProps> = ({ setHeaderOffset }) => {
                             boxShadow: "0 2px 6.9px 0 #93E657",
                         }}
                     >
-                        <div className="flex items-center justify-between w-[657px] h-[28px] mx-auto">
+                        <div className="flex items-center justify-around w-[657px] h-[28px] mx-auto">
                             <nav className="flex flex-nowrap gap-5">
-                                <a
-                                    href="#"
-                                    className="flex items-center justify-center w-[155px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
-                                >
-                                    Nuestra metodología
-                                </a>
-                                <a
-                                    href="#"
-                                    className="flex items-center justify-center w-[134px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
-                                >  
-                                    Stack tecnológico
-                                </a>
-                                <a
-                                    href="#"
-                                    className="flex items-center justify-center w-[77px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"                                    style={{ padding: 0 }}
-                                >
-                                    Servicios
-                                </a>
-                                <a
-                                    href="#"
-                                    className="flex items-center justify-center w-[50px] h-[17px] text-white font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
-                                    style={{ padding: 0 }}
-                                >
-                                    F.A.Q.
-                                </a>
+                                {navLinks.map((link) => (
+                                    <a
+                                        key={link.label}
+                                        href={link.href}
+                                        className="text-[#ecffe0] font-semibold text-sm hover:text-lime-300 transition-colors whitespace-nowrap"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
                             </nav>
-                            <div className="flex-shrink-0 w-[161px] h-[28px]">
+                            <div className="flex-shrink-0">
                                 <SolidButton>Reserva una llamada</SolidButton>
                             </div>
                         </div>
