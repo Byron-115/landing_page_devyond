@@ -12,6 +12,17 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+.use-system-font {
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+}
+
+@font-face {
+  font-family: 'SF Compact';
+  src: url('/fonts/SF-Compact-Display-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

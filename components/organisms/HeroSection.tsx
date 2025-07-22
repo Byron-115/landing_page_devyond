@@ -1,53 +1,35 @@
 import React from "react";
+import Image from "next/image";
+
 
 const HeroSection: React.FC = () => (
-  <section className="flex flex-col items-center justify-center w-full max-w-[846px] h-[462px] mx-auto px-4 sm:px-0">
+  <section className="flex flex-col items-center justify-start w-full max-w-266 mx-auto px-6.75 xl:px-0 sm:mt-24 pt-36 xl:pt-24 gap-8">
     {/* Contenedor de texto principal */}
-    <div className="w-full max-w-[846px] h-[283px] flex flex-col items-center">
       {/* Título */}
-      <div className="w-full max-w-[846px] h-[127px] flex items-center justify-center">
-        <div className="w-full max-w-[846px] h-[70px] flex flex-col items-center justify-center">
-          <h1 className="text-white font-medium text-3xl sm:text-4xl text-center leading-tight w-full">
-            Diseñamos y desarrollamos webs modernas de alto rendimiento que<br />
-          </h1>
-          <span className="text-[#82EC39] text-3xl sm:text-xl font-medium mt-4 text-center w-full">generan engagement</span>
-        </div>
-      </div>
+        <h1 className="text-white font-medium text-2xl sm:text-4xl xl:text-5xl text-center w-full sm:max-w-115 xl:max-w-250 mx-auto">
+          Diseñamos y desarrollamos páginas webs modernas de alto rendimiento que
+        </h1>
+        <span className="text-[#82EC39] text-2xl sm:text-4xl xl:text-5xl font-medium text-center w-full">generan engagement</span>
       {/* Subtítulo + botón */}
-      <div className="font-sf w-full max-w-[846px] h-[112px] flex flex-col items-center justify-between mt-11">
-        <div className="w-full max-w-[690px] h-[40px] flex items-center justify-center mx-auto">
-          <p className="text-gray-300 font-light leading-lg text-base sm:text-lg text-center w-full">
-            Somos expertos en construir webs que generan resultados<br />
-            para llevar tu negocio un paso más allá.
+      <div className="flex flex-col w-full max-w-[846px] items-center gap-8">
+          <p className="use-system-font text-white font-light leading-1.56 xl:leading-[1.4] text-lg xl:text-xl text-center max-w-74 sm:max-w-144 xl:max-w-150 mx-auto">
+            Somos expertos en construir webs que generan resultados para llevar tu negocio un paso más allá.
           </p>
-        </div>
-        <div className="mt-10">
+        
           <button
-            className="w-full max-w-[200px] h-[40px] bg-[#82EC39] hover:bg-lime-300 text-black font-semibold rounded-full flex items-center justify-center pl-4 pr-3 gap-1 transition-colors"
+            className="h-10 bg-[#82EC39] hover:bg-lime-300 text-black use-system-font font-semibold rounded-full flex items-center justify-center pl-4 pr-3 gap-1 transition-colors"
           >
             Hablemos
-            <span className="flex items-center justify-center w-[20px] h-[20px] self-center">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="block align-middle"
-              >
-                <path
-                  d="M5 11L11 5M11 5H6.5M11 5V9.5"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+            <span className="flex items-center justify-center self-center">
+              <Image
+                src="/assets/images/icon-arrow-up-right.png"
+                alt="Arrow Right Icon"
+                width={20}
+                height={20}
                 />
-              </svg>
             </span>
           </button>
-        </div>
       </div>
-    </div>
   </section>
 );
 

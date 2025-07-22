@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        oxanium: ['Oxanium', 'sans-serif'],
-      },
+       oxanium: ['Oxanium', 'sans-serif'],
+       sans: ['ui-sans-serif', 'system-ui'],
+    },
       screens: {
         xs: "360px",
       },

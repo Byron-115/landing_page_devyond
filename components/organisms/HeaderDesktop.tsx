@@ -27,7 +27,9 @@ const HeaderDesktop: React.FC<HeaderDesktopProps> = ({ setHeaderOffset }) => {
             const offset = Math.min(currentScrollY, maxOffset);
 
             setLocalHeaderOffset(offset);
-            setHeaderOffset && setHeaderOffset(offset);
+            if (setHeaderOffset) {
+                setHeaderOffset(offset);
+            }
 
             if (currentScrollY > lastScrollY && currentScrollY > maxOffset) {
                 setShow(false); // Se oculta al bajar

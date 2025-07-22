@@ -13,9 +13,7 @@ export default function Home() {
     <>
       <HeaderDesktop setHeaderOffset={setHeaderOffset} />
       <HeaderMobile />
-      <div className="pt-[72px] text-white flex justify-center items-center h-[80vh]">
-        <HeroSection />
-      </div>
+      <HeroSection />
       <BelowHeroSection />
       <ProductSection />
 
