@@ -1,46 +1,77 @@
 import React from "react";
+import Image from "next/image";
 
 const icons = [
-  "/icons/shopify.svg",
-  "/icons/supabase.svg",
-  "/icons/tailwind.svg",
-  "/icons/react.svg",
-  "/icons/next.svg",
+  "/assets/images/icon-storybook-inverse-1.svg",
+  "/assets/images/supabase-logo-icon-1.svg",
+  "/assets/images/icon-tailwind.svg",
+  "/assets/images/icon-react.svg",
+  "/assets/images/icon-next.svg",
 ];
 
 const ProductSection: React.FC = () => (
-  <section className="w-full flex flex-col md:flex-row items-center justify-center gap-8 py-16 px-4 bg-transparent">
-    {/* Columna de iconos */}
-    <div className="flex flex-col gap-8 items-center mr-0 md:mr-4 mb-8 md:mb-0">
-      {icons.map((src, i) => (
-        <img key={i} src={src} alt="" className="w-7 h-7 opacity-90" />
-      ))}
-    </div>
+  <section className="flex flex-col max-w-266 gap-14 mx-auto px-0 py-0">
+    {/* Título */}
+    <h2 className="text-center text-white text-3xl font-medium">
+      ¿Qué tienes en mente?
+    </h2>
+    {/* Contenido principal */}
+    <div className="flex flex-col xl:flex-row items-center justify-between gap-28">
+      {/* Iconos */}
+      <div className="flex flex-row xl:flex-col gap-4 items-center mr-0 pb-5">
+        {icons.map((src, i) => (
+          <img key={i} src={src} alt="" className="w-13 h-13 opacity-90" />
+        ))}
+      </div>
 
-    <div className="flex-shrink-0 mb-8 md:mb-0">
-        <img
+      <div className="flex-shrink-0">
+          <Image
             src="/assets/images/product_image.png"
-            alt="Product Section Image"
-            className="w-[320px] h-auto object-contain"
-        />
-    </div>
+            alt="Product Image"
+            width={388}
+            height={331}
+          />
+      </div>
 
-    {/* Texto y botón */}
-    <div className="flex flex-col justify-center ml-0 md:ml-8 max-w-md">
-      <h2 className="text-[#AEEE7C] text-2xl md:text-3xl font-medium mb-4">
-        Aplicación Web / MVP
-      </h2>
-      <p className="text-gray-200 text-base md:text-lg mb-4">
-        Aplicaciones web funcionales y ágiles, centradas en{" "}
-        <span className="text-[#AEEE7C]">experiencia de usuario</span> desde el inicio. Priorizamos la entrega rápida de un MVP útil, validable y preparado para evolucionar sin rehacer desde cero.
-      </p>
-      <p className="text-gray-200 text-base md:text-lg mb-8">
-        El stack que usamos nos permite <span className="text-[#AEEE7C]">escalar</span>, integrar nuevas funciones o <span className="text-[#AEEE7C]">automatizar procesos</span> sin perder velocidad ni control.
-      </p>
-      <button className="border border-white text-white rounded-full px-6 py-2 font-semibold flex items-center gap-2 hover:bg-white hover:text-black transition-colors w-fit">
-        Ver cómo lo hacemos
-        <span aria-hidden className="ml-1">↗</span>
-      </button>
+      {/* Texto y botón */}
+      <div className="flex flex-col justify-center gap-7 leading-1.43">
+        <h2 className="text-[#ecffe0] text-2xl font-medium">
+          Aplicación Web / MVP
+        </h2>
+        <div className="use-system-font flex flex-col text-white text-left text-sm leading-1.43 gap-6 max-w-101 mt-3">
+          <p> Aplicaciones web funcionales y ágiles, centradas en <span className="text-[#82ec39]">experiencia de usuario</span> desde el inicio. Priorizamos la entrega rápida de un MVP útil, validable y preparado para evolucionar sin rehacer desde cero.
+          </p>
+          <p> El stack que usamos nos permite <span className="text-[#82ec39]">escalar</span>, integrar nuevas funciones o <span className="text-[#82ec39]">automatizar procesos</span> sin perder velocidad ni control.
+          </p>
+        </div>
+        <button 
+          className="
+            flex flex-row justify-start border max-w-fit
+          text-white text-sm rounded-full px-3 py-2 
+            items-center gap-1.5 hover:bg-white hover:text-black 
+            transition-colors cursor-pointer"
+          style={{
+            borderImage: "linear-gradient(to right, #000, #666) 1",
+            borderWidth: 1,
+            borderStyle: "solid",
+          }}
+            >
+          <span className="text-left font-semibold">
+            Ver cómo lo hacemos
+          </span>
+          <span className="flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M5.833 5.833h8.334m0 0v8.334m0-8.334-8.334 8.334"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
     </div>
   </section>
 );

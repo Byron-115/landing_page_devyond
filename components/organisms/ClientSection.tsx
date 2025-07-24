@@ -5,32 +5,20 @@ const ClientSection: React.FC = () => (
         className="
         relative
         flex flex-col
-        gap-8
-        w-full
+        gap-9
+        xl:gap-22.25
+        mx-auto
         px-8
         py-8
         sm:flex-col
         lg:flex-row
         lg:items-center
-        lg:max-w-[1064px]
-        lg:mx-[108px]
         lg:mt-[94.4px]
         lg:mb-[116.7px]
-        lg:p-0
+        lg:px-0
+        lg:py-0
         "
     >
-    <div
-      className="
-        absolute right-0 top-1/2
-        w-[146.4px] h-[1266.6px]
-        pl-[146.3px]
-        bg-[radial-gradient(circle_at_254%_50%,_#909304,_rgba(0,154,220,0)_61%)]
-        blur-[148px]
-        rotate-[-270deg]
-        pointer-events-none
-        z-0
-      "
-    />
     {/* Columna izquierda: texto principal */}
     <div className="flex flex-col flex-1  sm:max-w-[494px] xl:max-w-113.75 gap-7 sm:gap-10 xl:gap-14">
         <p className="text-2xl sm:text-4xl xl:text-5xl font-medium text-left text-white self-stretch ">

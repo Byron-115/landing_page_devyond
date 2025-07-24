@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => (
           </p>
         
           <button
-            className="h-10 bg-[#82EC39] hover:bg-lime-300 text-black use-system-font font-semibold rounded-full flex items-center justify-center pl-4 pr-3 gap-1 transition-colors"
+            className="h-10 bg-[#82EC39] hover:bg-lime-300 text-black use-system-font font-semibold rounded-full flex items-center justify-center pl-4 pr-3 gap-1 transition-colors cursor-pointer"
           >
             Hablemos
             <span className="flex items-center justify-center self-center">
