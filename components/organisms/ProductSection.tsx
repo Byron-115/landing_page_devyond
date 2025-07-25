@@ -10,21 +10,16 @@ const icons = [
 ];
 
 const ProductSection: React.FC = () => (
-  <section className="flex flex-col max-w-266 gap-14 mx-auto px-0 py-0">
+  <section className="flex flex-col max-w-266 gap-10 xl:gap-14 mx-auto px-8 sm:px-0 py-0">
     {/* Título */}
-    <h2 className="text-center text-white text-3xl font-medium">
+    <h2 className="text-center text-white text-3xl font-medium leading-1.2 mx-auto max-w-50 h-14 
+        flex items-center justify-center sm:max-w-none sm:h-auto">
       ¿Qué tienes en mente?
     </h2>
     {/* Contenido principal */}
-    <div className="flex flex-col xl:flex-row items-center justify-between gap-28">
-      {/* Iconos */}
-      <div className="flex flex-row xl:flex-col gap-4 items-center mr-0 pb-5">
-        {icons.map((src, i) => (
-          <img key={i} src={src} alt="" className="w-13 h-13 opacity-90" />
-        ))}
-      </div>
-
-      <div className="flex-shrink-0">
+    <div className="flex flex-col xl:flex-row items-center justify-between gap-10 xl:gap-28">
+      {/* Imagen*/}
+      <div className="xl:order-2 flex-shrink-0">
           <Image
             src="/assets/images/product_image.png"
             alt="Product Image"
@@ -32,9 +27,21 @@ const ProductSection: React.FC = () => (
             height={331}
           />
       </div>
-
+      {/* Iconos */}
+      <div className="order-2 xl:order-1 flex flex-row xl:flex-col gap-4 items-center mr-0 pb-5">
+        {icons.map((src, i) => (
+          <Image
+            key={i}
+            src={src}
+            alt=""
+            width={52}
+            height={52}
+            className="w-13 h-13 opacity-90"
+          />
+        ))}
+      </div>
       {/* Texto y botón */}
-      <div className="flex flex-col justify-center gap-7 leading-1.43">
+      <div className="order-3 flex flex-col justify-center gap-7 leading-1.43">
         <h2 className="text-[#ecffe0] text-2xl font-medium">
           Aplicación Web / MVP
         </h2>
