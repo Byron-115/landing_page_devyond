@@ -7,8 +7,6 @@ import ClientSection from "@/components/organisms/ClientSection";
 import Footer from "@/components/organisms/Footer";
 
 export default function Home() {
-  
-
   return (
     <>
       <div className="flex flex-col gap-72">
